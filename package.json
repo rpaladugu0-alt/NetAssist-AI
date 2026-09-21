@@ -1,0 +1,19 @@
+{
+  "name": "netassist-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NetAssist AI full-stack application",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=backend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
