@@ -299,6 +299,10 @@ export default function App() {
         articles={articles}
         onClose={() => setKnowledgeOpen(false)}
         onAsk={sendQuestion}
+        onOpenArticle={(article) => {
+          setKnowledgeOpen(false);
+          setSourceArticle(article);
+        }}
       />
       <OutageModal
         open={outageOpen}

@@ -659,6 +659,19 @@
   font-size: 0.78rem;
 }
 
+.article-title-link {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--teal);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .info-list dd {
   margin: 4px 0 0;
   font-weight: 700;

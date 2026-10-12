@@ -1,6 +1,6 @@
 import Modal from './Modal';
 
-export default function KnowledgeBaseModal({ open, articles = [], onClose, onAsk }) {
+export default function KnowledgeBaseModal({ open, articles = [], onClose, onAsk, onOpenArticle }) {
   if (!open) return null;
 
   return (
@@ -9,8 +9,15 @@ export default function KnowledgeBaseModal({ open, articles = [], onClose, onAsk
       <ul className="article-list">
         {articles.map((article) => (
           <li key={article.id}>
-            <h3>{article.title}</h3>
+            <h3>
+              <button type="button" className="article-title-link" onClick={() => onOpenArticle(article)}>
+                {article.title}
+              </button>
+            </h3>
             <p>{article.summary}</p>
+            <button type="button" className="btn btn-tiny" onClick={() => onOpenArticle(article)}>
+              Read full article
+            </button>{' '}
             <button
               type="button"
               className="btn btn-tiny"
