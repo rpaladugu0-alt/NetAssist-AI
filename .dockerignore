@@ -1,0 +1,12 @@
+.git
+node_modules
+**/node_modules
+frontend/dist
+coverage
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.aws
+.config
